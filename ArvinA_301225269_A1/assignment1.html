@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<!--Arvin Almario / 301225269-->
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>BMR Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <div class="bodypage">
+        <header>
+            <div class="head">
+                <h1>BMR CALCULATOR</h1>
+            </div>
+        </header>
+        </br>
+        <div class="mytabs">
+            <input type="radio" id="imperial" name="tabs" checked="checked" />
+            <label for="imperial">Imperial BMR Calculator</label>
+            <div class="tab">
+                <h3>IMPERIAL and Daily Calorie Intake CALCULATOR</h3>
+                <form id="impForm">
+                    <label for="gender">GENDER: </label>
+                    <select name="gender" id="gender" onchange="choose();">
+                        <option selected value> SELECT </option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select></br></br>
+
+                    <label for="age">AGE: </label>
+                    <input type="number" id="age" name="age" />
+                    </br></br>
+
+                    <h4>YOUR HEIGHT</h4>
+                    <label for="feet">FEET: </label>
+                    <input type="number" id="feet" name="feet" />
+
+                    <label for="inches">INCHES: </label>
+                    <input type="number" id="inches" name="inches" />
+                    </br></br>
+
+                    <h4>YOUR WEIGHT</h4>
+                    <label for="stones">STONES: </label>
+                    <input type="number" id="stones" name="stones" />
+
+                    <label for="pounds">POUNDS: </label>
+                    <input type="number" id="pounds" name="pounds" />
+                    </br></br>
+
+                    <div class="radioactivitylevel">
+                        <h4>SELECT YOUR ACTIVITY LEVEL</h4>
+                        <input type="radio" id="act1" name="activity" value="1.2" />
+                        <label for="act1">I am sedentary (little or no exercise)</label></br>
+
+                        <input type="radio" id="act2" name="activity" value="1.375" />
+                        <label for="act2">I am lightly active (light exercise or sports 1-3 days per week)</label></br>
+
+                        <input type="radio" id="act3" name="activity" value="1.55" />
+                        <label for="act3">I am moderately active (moderate exercise or sports 3-5 days per week)</label></br>
+
+                        <input type="radio" id="act4" name="activity" value="1.725" />
+                        <label for="act4">I am very active (hard exercise or sports 6-7 days per week)</label></br>
+
+                        <input type="radio" id="act5" name="activity" value="1.9" />
+                        <label for="act5">I am super active (lvery hard exercise or sports and a physical job or 2x training)</label>
+                        </br></br>
+                    </div>
+                </form>
+                <input type="submit" id="submit" value="Calculate BMR">
+                <input type="button" value="Reset fields" onclick="impResetFunction()">
+            </div>
+
+            <input type="radio" id="metric" name="tabs" />
+            <label for="metric">Metric BMR Calculator</label>
+            <div class="tab">
+                <h3> METRIC and Daily Calorie Intake CALCULATOR</h3>
+                <form id="metricForm">
+                    <label for="gender">GENDER: </label>
+                    <select name="gender" id="Mgender" onchange="choose();">
+                        <option selected value> SELECT </option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select></br></br>
+
+                    <label for="age">AGE: </label>
+                    <input type="number" id="Mage" name="age" />
+                    </br></br>
+
+                    <h4>YOUR HEIGHT</h4>
+                    <label for="feet">CENTIMETERS: </label>
+                    <input type="number" id="cm" name="centimeters" />
+                    </br></br>
+
+                    <h4>YOUR WEIGHT</h4>
+                    <label for="stones">KILOGRAMS: </label>
+                    <input type="number" id="kg" name="kilograms" />
+                    </br></br>
+
+                    <div class="radioactivitylevel">
+                        <h4>SELECT YOUR ACTIVITY LEVEL</h4>
+                        <input type="radio" id="Mact1" name="activity" value="1.2" />
+                        <label for="Mact1">I am sedentary (little or no exercise)</label></br>
+
+                        <input type="radio" id="Mact2" name="activity" value="1.375" />
+                        <label for="Mact2">I am lightly active (light exercise or sports 1-3 days per week)</label></br>
+
+                        <input type="radio" id="Mact3" name="activity" value="1.55" />
+                        <label for="Mact3">I am moderately active (moderate exercise or sports 3-5 days per week)</label></br>
+
+                        <input type="radio" id="Mact4" name="activity" value="1.725" />
+                        <label for="Mact4">I am very active (hard exercise or sports 6-7 days per week)</label></br>
+
+                        <input type="radio" id="Mact5" name="activity" value="1.9" />
+                        <label for="Mact5">I am super active (lvery hard exercise or sports and a physical job or 2x training)</label>
+                        </br></br>
+                    </div>
+                </form>
+                <input type="submit" id="Msubmit" value="Calculate BMR">
+                <input type="button" value="Reset fields" onclick="metResetFunction()">
+            </div>
+        </div>
+    </div>
+</body>
+<script src="assignment1.js"></script>
+</html>
