@@ -1,0 +1,40 @@
+﻿<!--Arvin Almario / 301225269-->
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>table generator</title>
+    <link rel="stylesheet" href="style.css" />   
+</head>
+<body>
+    <div class="bodypage">
+        <div class="head">
+            <header>
+                <h1>TABLE GENERATOR</h1>
+            </header>
+            <form id="form">
+
+                <label for="row">Enter number of rows: </label>
+                <input type="number" id="row" name="row" placeholder="required"/>
+                </br></br>
+
+                <label for="column">Enter number of columns: </label>
+                <input type="number" id="column" name="column" placeholder="required"/>
+                </br></br>
+
+                <input type="button" value="Generate" onclick="createTable()">
+                <input type="button" value="Reset Fields" onclick="ResetFunction()">
+            </form>
+        </div>
+        <footer>
+            <p>&copy; Arvin Almario-301225269 | Table Generator | homework 02</p>
+        </footer>
+    </div>
+    </br></br>
+    <table id="table" class="tableCenter">
+
+    </table>
+</body>
+<script src="assignment2.js"></script>
+</html>
